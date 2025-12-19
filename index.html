@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Itohan | CS Portfolio</title>
+    <link rel="icon" href="/favicon.ico?v=2" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&family=DynaPuff:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+              mono: ['Space Mono', 'monospace'],
+              display: ['DynaPuff', 'cursive'],
+              handwriting: ['Shadows Into Light', 'cursive'],
+            },
+            colors: {
+              'kawaii-pink': '#fce7f3', /* pink-100 */
+              'kawaii-dark': '#2d2d2d',
+              'kawaii-accent': '#f472b6', /* pink-400 */
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'cursor': 'cursor .75s step-end infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'walk': 'walk 8s ease-in-out infinite',
+              'hop-across': 'hop-across 7s linear infinite',
+            },
+            keyframes: {
+              cursor: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              walk: {
+                '0%, 100%': { transform: 'translateX(0) rotate(-6deg)' },
+                '50%': { transform: 'translateX(120px) rotate(6deg)' },
+              },
+              'hop-across': {
+                '0%': { transform: 'translateX(0) translateY(0)' },
+                '12.5%': { transform: 'translateX(55px) translateY(-25px)' },
+                '25%': { transform: 'translateX(110px) translateY(0)' },
+                '37.5%': { transform: 'translateX(165px) translateY(-25px)' },
+                '50%': { transform: 'translateX(220px) translateY(0)' },
+                '62.5%': { transform: 'translateX(165px) translateY(-25px)' },
+                '75%': { transform: 'translateX(110px) translateY(0)' },
+                '87.5%': { transform: 'translateX(55px) translateY(-25px)' },
+                '100%': { transform: 'translateX(0) translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fffafc; /* Lighter pink */
+        color: #2d2d2d;
+        /* Custom Pink Heart Cursor */
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ff69b4" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>') 12 12, auto;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fffafc; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f9a8d4; /* pink-300 */
+        border-radius: 4px;
+      }
+      ::selection {
+        background: #fbcfe8; /* pink-200 */
+        color: #be185d; /* pink-700 */
+      }
+      /* Ensure pointer events work with custom cursor */
+      a, button {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23f472b6" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>') 12 12, pointer;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
